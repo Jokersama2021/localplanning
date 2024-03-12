@@ -5,6 +5,8 @@
 #include <ctime>
 #include <string>
 #include <vector>
+#include <conio.h>
+
 using namespace std;
 
 /*********************************全局变量***********************************/

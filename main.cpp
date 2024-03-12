@@ -71,11 +71,10 @@ bool process(const int& type)//总过程
 	return false;
 }
 
-int main()
+int main(int argc, _TCHAR* argv[])
 {
 	initgraph(SWIDTH, SHEIGHT, EW_SHOWCONSOLE);//图形窗口
 	setbkcolor(WHITE);//设置背景颜色
-	cleardevice();
 
 	if (process(PlanType::DriftparkType))
 	{

@@ -85,6 +85,10 @@ void DriftParking::showScene()
 	BeginBatchDraw();
 	cleardevice();
 
+	IMAGE img;
+	loadimage(&img, L"pic\\1.png", 0, 0);
+	putimage(0, 0, &img);
+
 	road0->showRoad();
 	ob1->showCar(RED);
 	ob2->showCar(RED);

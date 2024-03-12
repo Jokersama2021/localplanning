@@ -166,7 +166,6 @@ void SceneBase::laneChange(const Point& target_point, const int& type, const dou
 void SceneBase::driftStraightByS(const double& total_s)//直线漂移（自转+直线运动），只考虑指定的位置
 {
 	car0->updateDriftRotInfo();
-
 	double s = 0.0;
 	while (s < total_s)
 	{
