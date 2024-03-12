@@ -14,7 +14,7 @@ StaticObs::StaticObs()//¾²Ì¬ÈÆÕÏ
 	system("pause");
 }
 
-void StaticObs::showScene()//ÏÔÊ¾
+void StaticObs::showScene()
 {
 	BeginBatchDraw();
 	cleardevice();
@@ -23,7 +23,7 @@ void StaticObs::showScene()//ÏÔÊ¾
 	cone->showCone();
 	car0->showCar(BLACK);
 
-	if (SHOWCIRCLE && car0->p_center)//»æÖÆ¹ì¼£Ïß
+	if (SHOWCIRCLE && car0->p_center)
 	{
 		car0->showCircle();
 	}
@@ -96,7 +96,7 @@ void OvertakeObs::obsMoveStep()
 	carObs->moveStraightStep();
 }
 
-void OvertakeObs::showScene()//ÏÔÊ¾
+void OvertakeObs::showScene()
 {
 	BeginBatchDraw();
 	cleardevice();
@@ -180,7 +180,7 @@ void MeetingObs::obsMoveStep()
 	carObs->moveStraightStep();
 }
 
-void MeetingObs::showScene()//ÏÔÊ¾
+void MeetingObs::showScene()
 {
 	BeginBatchDraw();
 	cleardevice();
@@ -189,7 +189,7 @@ void MeetingObs::showScene()//ÏÔÊ¾
 	carObs->showCar(RED);
 	car0->showCar(BLACK);
 
-	if (SHOWCIRCLE && car0->p_center)//»æÖÆ¹ì¼£Ïß
+	if (SHOWCIRCLE && car0->p_center)
 	{
 		car0->showCircle();
 	}

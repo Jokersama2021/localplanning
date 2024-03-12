@@ -12,8 +12,8 @@ enum Shift//档位
 
 enum TurnDirection//转向状态机
 {
-	TurnRight,//右转
-	TurnLeft,//左转
+	TurnRight,
+	TurnLeft,
 };
 
 /******************************************车基类******************************************/
@@ -21,13 +21,13 @@ class CarBase//车基类
 {
 public:
 	virtual ~CarBase() = default;//虚析构
-	void initCar(const double& pos_x, const double& pos_y, const double& heading, const double& width, const double& length);//初始化
-	void updatePmidf();//更新前中点xy值
-	void updatePmidr();//更新后中点xy值
-	void updatePmid();//更新几何中点xy值
-	void showCar(const COLORREF& color);//绘制车辆矩形
+	void initCar(const double& pos_x, const double& pos_y, const double& heading, const double& width, const double& length);
+	void updatePmidf();//前中点
+	void updatePmidr();//中点
+	void updatePmid();//几何中点
+	void showCar(const COLORREF& color);//绘制车辆
 	void showCircle();//绘制轨迹线
-	void coutInfo();//打印信息
+	void coutInfo();
 
 	void moveStraightStep();//单帧直行	
 	void carTurnStep();//单帧转向
@@ -63,16 +63,16 @@ public:
 	double R0;//半斜长，自转半径
 	double theta0;//atan(car_length / car_width)
 
-	double speed = 0.0;//合速度，可正负，负代表前进，正代表倒车
-	double speed_x = 0.0;//x方向分速度，可正负，负代表向左，正代表向右
-	double speed_y = 0.0;//y方向分速度，可正负，负代表向上，正代表向下
+	double speed = 0.0;//合速度，负前进，正倒车
+	double speed_x = 0.0;//x方向分速度，负左，正右
+	double speed_y = 0.0;//y方向分速度，负上，正下
 
-	double a = 0.0;//合加速度，可正负，负代表加速，正代表减速
-	double a_x = 0.0;//x方向分加速度，可正负，负代表向左加速，正代表向右加速
-	double a_y = 0.0;//y方向分加速度，可正负，负代表向上加速，正代表向下加速
+	double a = 0.0;//合加速度，负加，正减
+	double a_x = 0.0;//x方向分加速度，负左，正右
+	double a_y = 0.0;//y方向分加速度，负上，正下
 
-	double delta_theta = 0.0;//角速度，可正负，负代表顺时针转向，正代表逆时针转向
-	double delta_theta_rot = 0.0;//自转角速度，可正负，负代表顺时针转向，正代表逆时针转向
+	double delta_theta = 0.0;//角速度，负顺，正逆
+	double delta_theta_rot = 0.0;//自转角速度，负顺，正逆
 	double heading_theta = 0.0;//航向角，为0时车辆竖直向上，负代表向左偏航，正代表向右偏航
 
 	int Gear = m_P;//档位

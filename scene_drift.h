@@ -5,8 +5,8 @@ class DriftPoint : public SceneBase//定点漂移
 {
 public:
 	DriftPoint();
-	void showScene();//显示
-	bool planning_process() override;//整个过程
+	void showScene();
+	bool planning_process() override;
 
 public:
 	unique_ptr<Cone> cone;//锥桶
@@ -17,8 +17,8 @@ class DriftParking : public SceneBase//漂移泊车
 {
 public:
 	DriftParking();
-	void showScene();//显示
-	bool planning_process() override;//整个过程
+	void showScene();
+	bool planning_process() override;
 
 public:
 	unique_ptr<CarObsStatic> ob1;

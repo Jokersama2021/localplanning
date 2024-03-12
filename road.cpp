@@ -7,7 +7,7 @@ RoadNormal::RoadNormal(const double& r_width)//一般道路
 	right_boundary = SWIDTH / 2.0 + Rwidth;
 }
 
-void RoadNormal::showRoad()//绘制道路
+void RoadNormal::showRoad()
 {
 	setlinestyle(PS_SOLID, 4);
 	setlinecolor(BLACK);

@@ -5,8 +5,8 @@ class StaticObs : public SceneBase//静态绕障
 {
 public:
 	StaticObs();
-	void showScene();//显示
-	bool planning_process() override;//整个过程
+	void showScene();
+	bool planning_process() override;
 
 public:
 	unique_ptr<Cone> cone;//锥桶
@@ -19,11 +19,11 @@ public:
 	OvertakeObs();
 	void obsMoveStep();
 	void showScene();//显示
-	bool planning_process() override;//整个过程
+	bool planning_process() override;
 
 public:
 	unique_ptr<CarNormal> carObs;//前障碍车
-	double start_dis = 0.0;//开始绕障的距离
+	double start_dis = 0.0;
 };
 
 class MeetingObs : public SceneBase//会车
@@ -31,10 +31,10 @@ class MeetingObs : public SceneBase//会车
 public:
 	MeetingObs();
 	void obsMoveStep();
-	void showScene();//显示
-	bool planning_process() override;//整个过程
+	void showScene();
+	bool planning_process() override;
 
 public:
 	unique_ptr<CarNormal> carObs;//障碍车
-	double start_dis = 200.0;//开始绕障的距离
+	double start_dis = 200.0;
 };

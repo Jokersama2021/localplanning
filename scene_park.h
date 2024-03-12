@@ -4,9 +4,9 @@
 class ReverseParking1 : public SceneBase //倒车方式1
 {
 public:
-	ReverseParking1();//构造
-	void showScene();//显示
-	bool planning_process() override;//整个倒车过程
+	ReverseParking1();
+	void showScene();
+	bool planning_process() override;
 
 public:
 	unique_ptr<CarObsStatic> ob1;
@@ -20,9 +20,9 @@ public:
 class ReverseParking2 : public SceneBase //倒车方式2
 {
 public:
-	ReverseParking2();//构造
-	void showScene();//显示
-	bool planning_process() override;//整个倒车过程
+	ReverseParking2();
+	void showScene();
+	bool planning_process() override;
 
 public:
 	unique_ptr<CarObsStatic> ob1;
@@ -36,9 +36,9 @@ public:
 class ParallelParking : public SceneBase //侧方位倒车
 {
 public:
-	ParallelParking();//构造
-	void showScene();//显示
-	bool planning_process() override;//整个倒车过程
+	ParallelParking();
+	void showScene();
+	bool planning_process() override;
 
 public:
 	unique_ptr<CarObsStatic> ob1;

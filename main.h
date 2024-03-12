@@ -4,7 +4,7 @@
 #include "scene_park.h"
 #include "scene_drift.h"
 
-enum PlanType//类型
+enum PlanType
 {
 	//直行
 	StraightStopObsType,//停障

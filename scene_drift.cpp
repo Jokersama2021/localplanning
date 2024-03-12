@@ -19,7 +19,7 @@ DriftPoint::DriftPoint()//U型弯漂移、定点漂移
 	system("pause");
 }
 
-void DriftPoint::showScene()//显示
+void DriftPoint::showScene()
 {
 	BeginBatchDraw();
 	cleardevice();
@@ -98,7 +98,7 @@ void DriftParking::showScene()
 	delay(DELAYTIME);
 }
 
-bool DriftParking::planning_process()//整个过程
+bool DriftParking::planning_process()
 {
 	//判断库的长度是否足够
 	if (park_length <= car0->car_length * 1.2)

@@ -14,7 +14,7 @@ StraightStopObs::StraightStopObs()//停障
 	system("pause");
 }
 
-void StraightStopObs::showScene()//显示
+void StraightStopObs::showScene()
 {
 	BeginBatchDraw();
 	cleardevice();
@@ -27,7 +27,7 @@ void StraightStopObs::showScene()//显示
 	delay(DELAYTIME);
 }
 
-bool StraightStopObs::planning_process()//整个过程
+bool StraightStopObs::planning_process()
 {
 	double stopline = cone->p_center->y + cone->r + safedis;
 	uniformAccByDis(car0->pmidf->y - stopline, 0.0);
@@ -48,7 +48,7 @@ StraightStation::StraightStation()//停靠站点
 	system("pause");
 }
 
-void StraightStation::showScene()//显示
+void StraightStation::showScene()
 {
 	BeginBatchDraw();
 	cleardevice();
@@ -61,7 +61,7 @@ void StraightStation::showScene()//显示
 	delay(DELAYTIME);
 }
 
-bool StraightStation::planning_process()//整个过程
+bool StraightStation::planning_process()
 {
 	uniformAccByDis(car0->pmid->y - station->y, 0.0);//减速进站
 	delay(stop_time * 1000);//停站等待
@@ -84,7 +84,7 @@ StraightFollow::StraightFollow()//跟车
 	system("pause");
 }
 
-void StraightFollow::showScene()//显示
+void StraightFollow::showScene()
 {
 	BeginBatchDraw();
 	cleardevice();
@@ -97,7 +97,7 @@ void StraightFollow::showScene()//显示
 	delay(DELAYTIME);
 }
 
-bool StraightFollow::planning_process()//整个过程
+bool StraightFollow::planning_process()
 {
 	double dis = car0->pmidf->y - carObs->pmidr->y;//初始间距
 	double delta_dis = dis - safedis;//初始间距-目标间距
@@ -123,7 +123,7 @@ bool StraightFollow::planning_process()//整个过程
 			car0->speed_y = carObs->speed_y;
 			car0->a_y = 0.0;
 		}
-		showScene();//显示		
+		showScene();	
 	}
 	car0->coutInfo();
 	return true;
@@ -144,7 +144,7 @@ StraightCrosswalk::StraightCrosswalk()//通过斑马线
 	}
 
 	car0->coutInfo();
-	showScene();//显示
+	showScene();
 	system("pause");
 }
 
@@ -160,7 +160,7 @@ bool StraightCrosswalk::peopleInCross()//斑马线是否有人
 	return false;
 }
 
-void StraightCrosswalk::showScene()//显示
+void StraightCrosswalk::showScene()
 {
 	BeginBatchDraw();
 	cleardevice();
@@ -208,7 +208,7 @@ bool StraightCrosswalk::planning_process()
 		}
 
 		cout << "dis = " << dis << ", car speed_y = " << car0->speed_y << ", a_y = " << car0->a_y << endl;
-		showScene();//显示
+		showScene();
 	}
 
 	//限速通过斑马线
@@ -227,7 +227,7 @@ bool StraightCrosswalk::planning_process()
 		}
 
 		cout << "car speed_y = " << car0->speed_y << ", a_y = " << car0->a_y << endl;
-		showScene();//显示
+		showScene();
 	}
 
 	//过了斑马线，继续加速，直到达到道路限速
@@ -243,7 +243,7 @@ bool StraightCrosswalk::planning_process()
 		}
 
 		cout << "car speed_y = " << car0->speed_y << ", a_y = " << car0->a_y << endl;
-		showScene();//显示
+		showScene();
 	}
 
 	return true;

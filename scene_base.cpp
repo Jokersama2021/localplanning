@@ -1,6 +1,6 @@
 #include "scene_base.h"
 
-void SceneBase::showScene()//显示，虚函数
+void SceneBase::showScene()//虚
 {
 	BeginBatchDraw();
 	cleardevice();
@@ -8,7 +8,7 @@ void SceneBase::showScene()//显示，虚函数
 	road0->showRoad();
 	car0->showCar(BLACK);
 
-	if (SHOWCIRCLE && car0->p_center)//绘制轨迹线
+	if (SHOWCIRCLE && car0->p_center)
 	{
 		car0->showCircle();
 	}
@@ -173,7 +173,7 @@ void SceneBase::driftStraightByS(const double& total_s)//直线漂移（自转+直线运动
 		car0->carRotationStep();//车自转
 		car0->pmid->pointMove(car0->speed_x, car0->speed_y);//横摆中心点直行
 		obsMoveStep();
-		showScene();//显示
+		showScene();
 	}
 	car0->coutInfo();
 }

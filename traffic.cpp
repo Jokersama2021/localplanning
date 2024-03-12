@@ -22,7 +22,7 @@ void Person::personMove()//行人移动
 	p_center->x += speed;
 }
 
-void Person::showPerson()//绘制
+void Person::showPerson()
 {
 	setfillcolor(YELLOW);
 	fillcircle(p_center->x, p_center->y, r);

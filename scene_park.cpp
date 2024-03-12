@@ -22,7 +22,7 @@ ReverseParking1::ReverseParking1()//倒车方式1
 	system("pause");
 }
 
-void ReverseParking1::showScene()//显示
+void ReverseParking1::showScene()
 {
 	BeginBatchDraw();
 	cleardevice();
@@ -32,7 +32,7 @@ void ReverseParking1::showScene()//显示
 	ob2->showCar(RED);
 	car0->showCar(BLACK);
 
-	if (SHOWCIRCLE && car0->p_center)//绘制轨迹线
+	if (SHOWCIRCLE && car0->p_center)
 	{
 		car0->showCircle();
 	}
@@ -41,7 +41,7 @@ void ReverseParking1::showScene()//显示
 	delay(DELAYTIME);
 }
 
-bool ReverseParking1::planning_process()//整个倒车过程
+bool ReverseParking1::planning_process()
 {
 	//判断库的宽度是否足够
 	if (park_width <= car0->car_width * 1.2)
@@ -97,7 +97,7 @@ ReverseParking2::ReverseParking2()//倒车方式2
 	system("pause");
 }
 
-void ReverseParking2::showScene()//显示
+void ReverseParking2::showScene()
 {
 	BeginBatchDraw();
 	cleardevice();
@@ -107,7 +107,7 @@ void ReverseParking2::showScene()//显示
 	ob2->showCar(RED);
 	car0->showCar(BLACK);
 
-	if (SHOWCIRCLE && car0->p_center)//绘制轨迹线
+	if (SHOWCIRCLE && car0->p_center)
 	{
 		car0->showCircle();
 	}
@@ -116,7 +116,7 @@ void ReverseParking2::showScene()//显示
 	delay(DELAYTIME);
 }
 
-bool ReverseParking2::planning_process()//整个倒车过程
+bool ReverseParking2::planning_process()
 {
 	//判断库的宽度是否足够
 	if (park_width <= car0->car_width * 1.2)
@@ -178,7 +178,7 @@ ParallelParking::ParallelParking()//侧方位倒车
 	system("pause");
 }
 
-void ParallelParking::showScene()//显示
+void ParallelParking::showScene()
 {
 	BeginBatchDraw();
 	cleardevice();
@@ -188,7 +188,7 @@ void ParallelParking::showScene()//显示
 	ob2->showCar(RED);
 	car0->showCar(BLACK);
 
-	if (SHOWCIRCLE && car0->p_center)//绘制轨迹线
+	if (SHOWCIRCLE && car0->p_center)
 	{
 		car0->showCircle();
 	}
@@ -197,7 +197,7 @@ void ParallelParking::showScene()//显示
 	delay(DELAYTIME);
 }
 
-bool ParallelParking::planning_process()//整个倒车过程
+bool ParallelParking::planning_process()
 {
 	//判断库的长度是否足够
 	if (park_length <= car0->car_length * 1.2)

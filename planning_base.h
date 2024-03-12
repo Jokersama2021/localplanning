@@ -10,20 +10,20 @@
 using namespace std;
 
 /*********************************全局变量***********************************/
-constexpr auto SWIDTH = 1200.0;//窗口宽
-constexpr auto SHEIGHT = 1200.0;//窗口高
-constexpr auto PI = 3.14159265358979323846;//圆周率
-constexpr auto SHOWCIRCLE = false;//是否绘制轨迹
+constexpr auto SWIDTH = 1200.0;
+constexpr auto SHEIGHT = 1200.0;
+constexpr auto PI = 3.14159265358979323846;
+constexpr auto SHOWCIRCLE = false;//绘制轨迹线
 constexpr auto DELAYTIME = 20;//间隔时间，ms
 constexpr auto CHANGETIME = 1000;//换档时间，ms
 
 /******************************************点******************************************/
-class Point//点
+class Point
 {
 public:
 	Point() = default;
 	Point(const double& p_x, const double& p_y, const double& p_theta = 0.0, const double& p_R = 0.0);
-	void showPoint();//绘制点
+	void showPoint();
 	void pointMove(const double& speed_x, const double& speed_y);//点的移动
 	void pointTurn(const Point& center, const double& turn_speed);//点绕center旋转，turn_speed为角速度
 	double distanceTo(const Point& p) const;//距离
@@ -55,7 +55,7 @@ public:
 };
 
 /******************************************全局函数******************************************/
-void delay(const int& time); //延时函数，单位ms
+void delay(const int& time); //延时函数，ms
 double normalizeAngle(const double& theta); //角度修正到[-PI, PI)之间
 void correctAngleError(double& target_theta, const double& delta_theta);//角度误差修正
 double disPointToLine(const Point& p, const Point& p_start, const Point& p_end);//点到直线的距离

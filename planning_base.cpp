@@ -1,12 +1,12 @@
 #include "planning_base.h"
 
 /******************************************点******************************************/
-Point::Point(const double& p_x, const double& p_y, const double& p_theta, const double& p_R) : x(p_x), y(p_y), thetaP(p_theta), Rp(p_R)//点
+Point::Point(const double& p_x, const double& p_y, const double& p_theta, const double& p_R) : x(p_x), y(p_y), thetaP(p_theta), Rp(p_R)
 {
 
 }
 
-void Point::showPoint()//绘制点
+void Point::showPoint()
 {
 	setfillcolor(BLACK);
 	solidcircle(x, y, r);
@@ -50,7 +50,7 @@ double Point::thetaTo(const Point& p) const//this->相对于p的角度
 	}
 	else if (x > p.x)//第一、四象限
 	{
-		return -atan((y - p.y) / (x - p.x));//考虑到eaxyX坐标系，取负号
+		return -atan((y - p.y) / (x - p.x));//eaxyX坐标系，取负号
 	}
 	else if (x < p.x)//第二、三象限
 	{
@@ -94,7 +94,7 @@ double Vec2d::innerProd(const Vec2d& other) const //点乘
 }
 
 /******************************************全局函数******************************************/
-void delay(const int& time) //延时函数，单位ms
+void delay(const int& time) //延时函数，ms
 {
 	clock_t  now = clock();
 	while (clock() - now < time)

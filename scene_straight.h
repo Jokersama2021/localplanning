@@ -5,7 +5,7 @@ class StraightStopObs : public SceneBase //停障
 {
 public:
 	StraightStopObs();
-	void showScene();//显示
+	void showScene();
 	bool planning_process() override;
 
 public:
@@ -17,7 +17,7 @@ class StraightStation : public SceneBase //停靠站点
 {
 public:
 	StraightStation();
-	void showScene();//显示
+	void showScene();
 	bool planning_process() override;
 
 public:
@@ -29,7 +29,7 @@ class StraightFollow : public SceneBase //跟车
 {
 public:
 	StraightFollow();
-	void showScene();//显示
+	void showScene();
 	bool planning_process() override;
 
 public:
@@ -42,7 +42,7 @@ class StraightCrosswalk : public SceneBase //通过斑马线
 public:
 	StraightCrosswalk();
 	bool peopleInCross();//斑马线是否有人
-	void showScene();//显示
+	void showScene();
 	bool planning_process() override;
 
 public:

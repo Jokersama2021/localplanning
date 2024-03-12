@@ -1,7 +1,7 @@
 #include "car.h"
 
 /******************************************车基类******************************************/
-void CarBase::initCar(const double& pos_x, const double& pos_y, const double& heading, const double& width, const double& length)//初始化
+void CarBase::initCar(const double& pos_x, const double& pos_y, const double& heading, const double& width, const double& length)
 {
 	car_width = width;
 	car_length = length;
@@ -70,9 +70,9 @@ void CarBase::updatePmid()//更新几何中点xy值
 	}
 }
 
-void CarBase::showCar(const COLORREF& color)//绘制车辆矩形
+void CarBase::showCar(const COLORREF& color)//绘制车辆
 {
-	setlinestyle(PS_SOLID, 4);	// 设置线的样式
+	setlinestyle(PS_SOLID, 4);
 	setlinecolor(color);
 	line(plf->x, plf->y, prf->x, prf->y);
 	line(prf->x, prf->y, prr->x, prr->y);
@@ -290,7 +290,7 @@ void CarBase::updateDriftRotRevInfo(const Point& center)//更新漂移自转+公转信息
 }
 
 /******************************************一般车******************************************/
-CarNormal::CarNormal(const double& pos_x, const double& pos_y, const double& heading, const double& width, const double& length) //一般车
+CarNormal::CarNormal(const double& pos_x, const double& pos_y, const double& heading, const double& width, const double& length) 
 {
 	initCar(pos_x, pos_y, heading, width, length);
 }

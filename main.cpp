@@ -1,6 +1,6 @@
 #include "main.h"
 
-bool process(const int& type)//总过程
+bool process(const int& type)
 {
 	switch (type)
 	{
@@ -74,11 +74,11 @@ bool process(const int& type)//总过程
 int main(int argc, _TCHAR* argv[])
 {
 	initgraph(SWIDTH, SHEIGHT, EW_SHOWCONSOLE);//图形窗口
-	setbkcolor(WHITE);//设置背景颜色
+	setbkcolor(WHITE);
 
 	if (process(PlanType::DriftparkType))
 	{
-		cout << "完成" << endl;
+		cout << "finish" << endl;
 	}
 
 	system("pause");
