@@ -20,13 +20,13 @@ enum TurnDirection//转向状态机
 class CarBase//车基类
 {
 public:
-	virtual ~CarBase() = default;//虚析构
+	virtual ~CarBase() = default;
 	void initCar(const double& pos_x, const double& pos_y, const double& heading, const double& width, const double& length);
 	void updatePmidf();//前中点
 	void updatePmidr();//中点
 	void updatePmid();//几何中点
-	void showCar(const COLORREF& color);//绘制车辆
-	void showCircle();//绘制轨迹线
+	void showCar(const COLORREF& color);
+	void showCircle();
 	void coutInfo();
 
 	void moveStraightStep();//单帧直行	

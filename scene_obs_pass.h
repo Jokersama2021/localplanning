@@ -18,7 +18,7 @@ class OvertakeObs : public SceneBase//≥¨≥µ
 public:
 	OvertakeObs();
 	void obsMoveStep();
-	void showScene();//œ‘ æ
+	void showScene();
 	bool planning_process() override;
 
 public:
