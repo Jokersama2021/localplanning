@@ -136,8 +136,8 @@ void CarBase::updateRinRout(const double& R)//更新4个半径
 {
 	Ror = R + car_width / 2.0;
 	Rir = R - car_width / 2.0;
-	Rof = hypot(Ror, car_length); //sqrt(pow(Ror, 2.0) + pow(car_length, 2.0));
-	Rif = hypot(Rir, car_length); //sqrt(pow(Rir, 2.0) + pow(car_length, 2.0));
+	Rof = hypot(Ror, car_length);
+	Rif = hypot(Rir, car_length);
 }
 
 void CarBase::updateTurnInfo(const int& turn_state, const double& R)//更新转向信息
@@ -262,8 +262,8 @@ void CarBase::updateDriftRotInfo()//更新漂移自转信息
 
 	pmid->thetaP = 0.0;
 	double heading_theta_new = normalizeAngle(heading_theta);
-	plf->thetaP = heading_theta_new - theta0 + PI;//plf->thetaTo(*pmid);
-	prf->thetaP = heading_theta_new + theta0;//prf->thetaTo(*pmid);
+	plf->thetaP = heading_theta_new - theta0 + PI;
+	prf->thetaP = heading_theta_new + theta0;
 	plr->thetaP = prf->thetaP + PI;
 	prr->thetaP = plf->thetaP + PI;
 }
