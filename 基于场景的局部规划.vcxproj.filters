@@ -79,7 +79,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="pic\1.png">
+    <Image Include="..\..\..\Desktop\resized_road_scene.jpg">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>
