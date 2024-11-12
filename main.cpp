@@ -76,12 +76,79 @@ int main(int argc, _TCHAR* argv[])
 	initgraph(SWIDTH, SHEIGHT, EW_SHOWCONSOLE);//Í¼ÐÎ´°¿Ú
 	setbkcolor(WHITE);
 
+	if (process(PlanType::StraightStopObsType))
+	{
+		cout << "finish" << endl;
+	}
+	system("pause");
+
+	if (process(PlanType::StraightStationType))
+	{
+		cout << "finish" << endl;
+	}
+	system("pause");
+
+	if (process(PlanType::StraightFollowType))
+	{
+		cout << "finish" << endl;
+	}
+	system("pause");
+
+
+	if (process(PlanType::StraightCrosswalkType))
+	{
+		cout << "finish" << endl;
+	}
+	system("pause");
+
+	if (process(PlanType::ObsPassStaticType))
+	{
+		cout << "finish" << endl;
+	}
+	system("pause");
+
+	if (process(PlanType::ObsPassOvertakeType))
+	{
+		cout << "finish" << endl;
+	}
+	system("pause");
+
+	if (process(PlanType::ObsPassMeetingType))
+	{
+		cout << "finish" << endl;
+	}
+	system("pause");
+
+	if (process(PlanType::ParkReverse1Type))
+	{
+		cout << "finish" << endl;
+	}
+	system("pause");
+
+	if (process(PlanType::ParkReverse2Type))
+	{
+		cout << "finish" << endl;
+	}
+	system("pause");
+
+	if (process(PlanType::ParkParallelType))
+	{
+		cout << "finish" << endl;
+	}
+	system("pause");
+
+	if (process(PlanType::DriftPointType))
+	{
+		cout << "finish" << endl;
+	}
+	system("pause");
+
 	if (process(PlanType::DriftparkType))
 	{
 		cout << "finish" << endl;
 	}
-
 	system("pause");
+
 	closegraph();
 	return 0;
 }
